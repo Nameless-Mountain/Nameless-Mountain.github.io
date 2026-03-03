@@ -25,7 +25,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { font-size: var(--base-font-size); }
+html { font-size: var(--base-font-size); overflow-x: hidden; }
 
 body {
   font-family: var(--body-font);
@@ -34,6 +34,7 @@ body {
   color: var(--navy);
   background-color: var(--cream);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -46,6 +47,7 @@ h1, h2, h3, h4 {
   letter-spacing: -0.02em;
   line-height: 1.2;
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 h1 { font-size: clamp(2rem, 3.6vw + 1rem, 4rem); line-height: 1.06; }
@@ -190,6 +192,7 @@ p a {
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .section-white { background-color: var(--cream); color: var(--navy); }
@@ -529,32 +532,38 @@ p a {
   .header-nav { display: none; }
   .header-burger { display: flex; }
 
+  h1 { font-size: clamp(1.75rem, 4vw + 1rem, 2.5rem); }
+  h2 { font-size: clamp(1.5rem, 2vw + 1rem, 2rem); }
+
   .two-col {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .two-col-reverse > :first-child { order: 2; }
-  .two-col-reverse > :last-child { order: 1; }
+  .two-col-text { padding: 0; }
 
   .three-col {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
+  .section-pad-xl {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .section-hero { min-height: 50vh; }
+
   .event {
-    grid-template-columns: 1fr;
+    grid-template-columns: 80px 1fr;
     gap: 1rem;
   }
 
-  .event-thumb {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-  }
+  .event-thumb { display: none; }
 
   .event-date {
-    display: flex;
-    gap: 0.5rem;
-    align-items: baseline;
+    text-align: center;
+    padding-top: 0;
   }
 
   .contact-grid {
@@ -563,9 +572,12 @@ p a {
 
   .contact-grid .contact-image { order: 2; }
 
+  .btn { font-size: 0.9rem; padding: 0.8rem 1rem; }
+
   .footer-grid {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 1.5rem;
   }
 
   .footer-signup { text-align: center; }
@@ -573,11 +585,15 @@ p a {
 
   .leadership-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .leader img {
+    width: 150px;
+    height: 150px;
   }
 
   .mobile-menu a { font-size: 8.5vmin; }
-
-  h1 { font-size: clamp(2rem, 5vw + 1rem, 3rem); }
 }
 
 @media (min-width: 576px) and (max-width: 799px) {
