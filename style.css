@@ -79,7 +79,7 @@ h1, h2, h3, h4 {
   overflow-wrap: break-word;
 }
 
-h1 { font-size: clamp(2rem, 3.6vw + 1rem, 4rem); line-height: 1.1; }
+h1 { font-size: clamp(2rem, 3.6vw + 1rem, 4.5rem); line-height: 1.1; }
 h2 { font-size: clamp(1.8rem, 2.16vw + 1rem, 2.8rem); line-height: 1.11; }
 h3 { font-size: clamp(1.5rem, 1.44vw + 1rem, 2.2rem); line-height: 1.14; }
 h4 { font-size: clamp(1.2rem, 0.72vw + 1rem, 1.6rem); line-height: 1.17; }
@@ -258,13 +258,14 @@ p a {
 .hero-home-image {
   grid-column: 2;
   grid-row: 1;
-  padding-top: 2rem;
+  padding-top: 100px;
 }
 
 .hero-home-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: top right;
   display: block;
 }
 
@@ -274,8 +275,7 @@ p a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 8rem;
-  padding-bottom: 3rem;
+  padding: 13.75rem var(--site-gutter) 3rem calc(1 / 24 * 100%);
   z-index: 1;
 }
 
@@ -284,12 +284,18 @@ p a {
 }
 
 .hero-home-text .text-large {
+  max-width: 85%;
   margin-bottom: 3rem;
 }
 
 .hero-home-cta {
-  max-width: 280px;
-  margin-left: 3rem;
+  max-width: 260px;
+  margin-left: calc(3 / 24 * 100%);
+}
+
+.btn-stretch {
+  display: block;
+  text-align: center;
 }
 
 /* Two-column layout */
