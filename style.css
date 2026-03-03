@@ -277,7 +277,7 @@ p a {
   line-height: 1.2;
   text-decoration: none;
   padding: 1rem 1.3rem;
-  border-radius: 10px;
+  border-radius: 300px;
   border: 1px solid transparent;
   cursor: pointer;
   transition: opacity 0.2s;
@@ -294,6 +294,7 @@ p a {
   background-color: transparent;
   color: var(--steel-blue);
   border-color: var(--steel-blue);
+  border-radius: 0;
 }
 
 /* Dark/black section buttons */
@@ -398,7 +399,7 @@ p a {
   color: inherit;
   padding: 0.6rem 1.2rem;
   border: 1px solid;
-  border-radius: 10px;
+  border-radius: 300px;
 }
 
 .event-cta:hover { opacity: 0.7; }
@@ -424,7 +425,7 @@ p a {
   width: 100%;
   padding: 10px 20px;
   border: 1px solid var(--navy);
-  border-radius: 10px;
+  border-radius: 300px;
   font-family: var(--body-font);
   font-size: 1rem;
   color: var(--navy);
@@ -436,7 +437,7 @@ p a {
   color: hsla(var(--black-hsl), 0.55);
 }
 
-.form-group textarea { height: 4em; resize: vertical; }
+.form-group textarea { height: 4em; resize: vertical; border-radius: 10px; }
 
 .form-group input:focus,
 .form-group textarea:focus {
@@ -462,8 +463,8 @@ p a {
   grid-template-columns: 1fr auto 1fr;
   gap: 2rem;
   align-items: start;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-top: calc(10vmax / 10);
+  padding-bottom: calc(10vmax / 10);
 }
 
 .footer-links { list-style: none; }
@@ -491,7 +492,7 @@ p a {
 .footer-signup-form input {
   padding: 10px 20px;
   border: 1px solid var(--navy);
-  border-radius: 10px;
+  border-radius: 300px;
   font-family: var(--body-font);
   font-size: 1rem;
   color: var(--navy);
@@ -505,7 +506,7 @@ p a {
 
 .footer-signup-form button {
   padding: 0.75rem 1.3rem;
-  border-radius: 10px;
+  border-radius: 300px;
   border: none;
   background: var(--steel-blue);
   color: var(--cream);
