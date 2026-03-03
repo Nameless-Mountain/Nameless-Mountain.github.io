@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join - Nameless Mountain</title>
+  <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="header header-dark">
+      <div class="header-inner">
+        <div class="header-logo">
+          <a href="/"><img src="images/logo.png" alt="Nameless Mountain"></a>
+        </div>
+        <nav class="header-nav">
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="join.html" aria-current="page">Join</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="header-burger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.add('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu" onclick="this.parentElement.classList.remove('open')">&times;</button>
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a href="join.html">Join</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <main>
+      <!-- Hero with background image -->
+      <section class="section section-black section-hero" style="background-image: url('images/join-hero.webp'); background-position: 37.8% 3.2%; align-items: flex-end;">
+        <div class="section-hero-overlay"></div>
+        <div class="content-wrapper" style="padding-bottom: 4rem;">
+          <h1>BUILD WITH US</h1>
+        </div>
+      </section>
+
+      <!-- Three Ways -->
+      <section class="section section-dark section-pad-xl">
+        <div class="content-wrapper">
+          <h2 class="text-center" style="margin-bottom: 3rem;">Three Ways to Become a Member</h2>
+          <div class="three-col">
+            <div class="card">
+              <a href="donate.html" target="_blank"><img src="images/donate-card.jpg" alt="Donate"></a>
+              <h4><a href="donate.html" target="_blank">Donate</a></h4>
+            </div>
+            <div class="card">
+              <a href="volunteer.html" target="_blank"><img src="images/volunteer-card.jpg" alt="Volunteer"></a>
+              <h4><a href="volunteer.html" target="_blank">Volunteer</a></h4>
+            </div>
+            <div class="card">
+              <a href="stay-in-touch.html" target="_blank"><img src="images/stay-in-touch-card.jpg" alt="Stay In Touch"></a>
+              <h4><a href="stay-in-touch.html" target="_blank">Stay In Touch</a></h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="content-wrapper">
+        <div class="footer-grid">
+          <div class="footer-links-col">
+            <ul class="footer-links">
+              <li><a href="terms-of-use.html">Terms of Use</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">FAQs and Policies</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-logo">
+            <a href="/"><img src="images/logo-cream.png" alt="Nameless Mountain"></a>
+          </div>
+          <div class="footer-signup">
+            <h4>Join Our Mailing List</h4>
+            <form class="footer-signup-form" onsubmit="event.preventDefault(); this.innerHTML='<p>Thank you!</p>';">
+              <input type="email" placeholder="E-mail Address" required>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

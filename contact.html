@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us - Nameless Mountain</title>
+  <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-logo">
+          <a href="/"><img src="images/logo.png" alt="Nameless Mountain"></a>
+        </div>
+        <nav class="header-nav">
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="join.html">Join</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+        <button class="header-burger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.add('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu" onclick="this.parentElement.classList.remove('open')">&times;</button>
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a href="join.html">Join</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <main>
+      <section class="section section-white section-pad-xl" style="padding-top: 8rem;">
+        <div class="content-wrapper">
+          <div class="contact-grid">
+            <div class="contact-form-col">
+              <h1>Contact Us</h1>
+              <p>Please use the form below for all general inquiries.</p>
+
+              <form style="margin-top: 1.5rem;" onsubmit="event.preventDefault(); this.innerHTML='<p style=&quot;font-size:1.2rem;margin-top:2rem;&quot;>Thank you!</p>';">
+                <div class="form-group">
+                  <label>Name</label>
+                  <div class="form-row">
+                    <div>
+                      <input type="text" placeholder="First Name" required>
+                    </div>
+                    <div>
+                      <input type="text" placeholder="Last Name" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email <span style="font-size: 0.8em;">(required)</span></label>
+                  <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message <span style="font-size: 0.8em;">(required)</span></label>
+                  <textarea id="message" required></textarea>
+                </div>
+                <div style="text-align: center;">
+                  <button type="submit" class="btn btn-primary" style="min-width: 120px;">SEND</button>
+                </div>
+              </form>
+
+              <p style="margin-top: 2rem;">Please use the buttons below for ethics and safety inquiries.</p>
+
+              <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                <a href="#" class="btn btn-primary" style="flex: 1; text-align: center;" target="_blank">Contact the Independent Ethics Advisor</a>
+                <a href="#" class="btn btn-secondary" style="flex: 1; text-align: center;" target="_blank">Report a Violation</a>
+              </div>
+            </div>
+            <div class="contact-image">
+              <img src="images/contact-painting.webp" alt="Mountain painting" class="img-cover" style="aspect-ratio: 5/6;">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="content-wrapper">
+        <div class="footer-grid">
+          <div class="footer-links-col">
+            <ul class="footer-links">
+              <li><a href="terms-of-use.html">Terms of Use</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">FAQs and Policies</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-logo">
+            <a href="/"><img src="images/logo-cream.png" alt="Nameless Mountain"></a>
+          </div>
+          <div class="footer-signup">
+            <h4>Join Our Mailing List</h4>
+            <form class="footer-signup-form" onsubmit="event.preventDefault(); this.innerHTML='<p>Thank you!</p>';">
+              <input type="email" placeholder="E-mail Address" required>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

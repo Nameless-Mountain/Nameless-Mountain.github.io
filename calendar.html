@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar - Nameless Mountain</title>
+  <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="header header-dark">
+      <div class="header-inner">
+        <div class="header-logo">
+          <a href="/"><img src="images/logo.png" alt="Nameless Mountain"></a>
+        </div>
+        <nav class="header-nav">
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="join.html">Join</a>
+          <a href="calendar.html" aria-current="page">Calendar</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="header-burger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.add('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu" onclick="this.parentElement.classList.remove('open')">&times;</button>
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a href="join.html">Join</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <main>
+      <!-- Hero -->
+      <section class="section section-black section-hero" style="min-height: 50vh; background-image: url('images/calendar-hero.png');">
+        <div class="section-hero-overlay"></div>
+        <div class="content-wrapper text-center">
+          <h2>Upcoming Events</h2>
+        </div>
+      </section>
+
+      <!-- Events -->
+      <section class="section section-light section-pad-xl">
+        <div class="content-wrapper">
+          <div class="event-list">
+
+            <article class="event">
+              <img src="images/event-painting.png" alt="Dedication Ceremony" class="event-thumb">
+              <div class="event-date">
+                <span class="month">May</span>
+                <span class="day">2</span>
+              </div>
+              <div class="event-info">
+                <h3>Dedication Ceremony</h3>
+                <div class="event-meta">
+                  <p>Saturday, May 2, 2026</p>
+                  <p>1:00 PM &ndash; 3:00 PM</p>
+                  <p>Nameless Mountain, 5760 51st St, Boulder, CO, 80301</p>
+                </div>
+                <p class="event-excerpt">A ceremony to dedicate the official opening of Nameless Mountain. Open to all. Refreshments will be served before and after.</p>
+                <a href="#" class="event-cta">View Event &rarr;</a>
+              </div>
+            </article>
+
+            <article class="event">
+              <img src="images/event-painting.png" alt="Grand Opening Gala" class="event-thumb">
+              <div class="event-date">
+                <span class="month">May</span>
+                <span class="day">2</span>
+              </div>
+              <div class="event-info">
+                <h3>Grand Opening Gala</h3>
+                <div class="event-meta">
+                  <p>Saturday, May 2, 2026</p>
+                  <p>8:00 PM &ndash; 11:59 PM</p>
+                  <p>Nameless Mountain, 5760 51st St, Boulder, CO, 80301</p>
+                </div>
+                <p class="event-excerpt">A ceremony to dedicate the official opening of Nameless Mountain. Open to all. Refreshments will be served before and after.</p>
+                <a href="#" class="event-cta">View Event &rarr;</a>
+              </div>
+            </article>
+
+            <article class="event">
+              <img src="images/potluck-brunch.png" alt="Metta and Potluck Brunch" class="event-thumb">
+              <div class="event-date">
+                <span class="month">May</span>
+                <span class="day">3</span>
+              </div>
+              <div class="event-info">
+                <h3>Metta and Potluck Brunch</h3>
+                <div class="event-meta">
+                  <p>Sunday, May 3, 2026</p>
+                  <p>10:00 AM &ndash; 1:00 PM</p>
+                  <p>Nameless Mountain, 5760 N 51st St, Boulder, CO, 80301</p>
+                </div>
+                <p class="event-excerpt">A potluck brunch for practitioners from all Dharmic traditions. Hosted in the Great Room at the Reservoir Farmhouse at 5760 51st St. Come early for a morning metta session, then enjoy a communal meal with fellow yogis, meditators and contemplatives.</p>
+                <a href="#" class="event-cta">View Event &rarr;</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="content-wrapper">
+        <div class="footer-grid">
+          <div class="footer-links-col">
+            <ul class="footer-links">
+              <li><a href="terms-of-use.html">Terms of Use</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">FAQs and Policies</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-logo">
+            <a href="/"><img src="images/logo-cream.png" alt="Nameless Mountain"></a>
+          </div>
+          <div class="footer-signup">
+            <h4>Join Our Mailing List</h4>
+            <form class="footer-signup-form" onsubmit="event.preventDefault(); this.innerHTML='<p>Thank you!</p>';">
+              <input type="email" placeholder="E-mail Address" required>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

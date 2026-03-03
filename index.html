@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nameless Mountain</title>
+  <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-logo">
+          <a href="/"><img src="images/logo.png" alt="Nameless Mountain"></a>
+        </div>
+        <nav class="header-nav">
+          <a href="/" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="join.html">Join</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="header-burger" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.add('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu" onclick="this.parentElement.classList.remove('open')">&times;</button>
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a href="join.html">Join</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <main>
+      <section class="section section-white section-hero" style="min-height: 100vh;">
+        <div class="content-wrapper">
+          <div class="two-col" style="padding-top: 8rem; padding-bottom: 4rem;">
+            <div class="two-col-text">
+              <h1>A PLACE TO STRENGTHEN THE SPIRIT</h1>
+              <p class="text-large" style="margin-top: 1.5rem;">Through meditation, education and spiritual training, Nameless Mountain helps people grow into their strongest, most connected selves.</p>
+              <p style="margin-top: 2rem;"><a href="join.html" class="btn btn-primary">Join Us</a></p>
+            </div>
+            <div>
+              <img src="images/hero-painting.png" alt="Mountain painting by Conrad Jon Godly">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="content-wrapper">
+        <div class="footer-grid">
+          <div class="footer-links-col">
+            <ul class="footer-links">
+              <li><a href="terms-of-use.html">Terms of Use</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">FAQs and Policies</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-logo">
+            <a href="/"><img src="images/logo-cream.png" alt="Nameless Mountain"></a>
+          </div>
+          <div class="footer-signup">
+            <h4>Join Our Mailing List</h4>
+            <form class="footer-signup-form" onsubmit="event.preventDefault(); this.innerHTML='<p>Thank you!</p>';">
+              <input type="email" placeholder="E-mail Address" required>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
